@@ -1,0 +1,10 @@
+<h2>Add New Friends!</h2>
+
+<% @users.each do |user| %>
+  <ul>
+  <% if user.name != current_user.name %> 
+    <li><%= user.name %> <%= button_to "Add friend", action: "create", friend_id: user.id %></li>
+  <% end %>
+  </ul>
+<% end %> 
+

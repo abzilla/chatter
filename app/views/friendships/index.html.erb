@@ -1,0 +1,10 @@
+<h2>All Your Friends!</h2>
+
+<ul>
+  <% @users_friends.each do |user| %>
+    <li><%= user.name %></li>
+    <%= form_tag(new_user_friendship_post_path(current_user, Friendship.find_by(:friend_id => user.id)), :method => :get) do %>
+      <%= submit_tag "New Post!" %>
+    <% end %>
+  <% end %>
+</ul>
