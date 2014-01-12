@@ -1,0 +1,13 @@
+<h2><%= @user.name %></h2>
+<h2><%= @user.email %></h2>
+
+
+<%= link_to "Add new friends!", new_user_friendship_path(@user) %> |
+<%= link_to "See all your friends!", user_friendships_path(@user) %> |
+<%= link_to "See all your posts!", viewposts_user_path(@user) %> <br>
+
+
+<%= link_to "Change your password", edit_user_path(@user) %> |
+<%= link_to "Delete your account", user_path(@user), :method => :delete %> |
+<%= link_to "Sign out of your account", session_path, :method => :delete %>
+

@@ -1,5 +1,15 @@
 Chatter::Application.routes.draw do
-  resources :contacts, only: [:new, :create]
-  resources :visitors, only: [:new, :create]
-  root to: 'visitors#new'
+    resources :users do
+    resources :friendships, only: [:index, :show, :new, :create] do
+      resources :posts, only: [:index, :create, :show, :new]
+    end
+
+    member do
+      get :viewposts
+    end
+  end
+
+  resource :session, only: [:new, :create, :destroy]
+
+  root :to => "welcome#index"
 end
