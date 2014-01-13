@@ -11,6 +11,7 @@ Chatter::Application.routes.draw do
 
   resource :session, only: [:new, :create, :destroy]
 
-  root :to => "welcome#index"
+  get "public/index"
+  root to: "public#index"
   
 end
