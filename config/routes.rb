@@ -13,5 +13,4 @@ Chatter::Application.routes.draw do
 
   root :to => "welcome#index"
   
-  mount CommunityEngine::Engine => "/"
 end
