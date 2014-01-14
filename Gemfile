@@ -7,18 +7,13 @@ gem 'rails', '4.0.0'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
-
 gem 'thin'
 gem 'websocket-rails', git: 'git://github.com/DanKnox/websocket-rails.git'
-
 gem "less-rails"
 gem 'twitter-bootstrap-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
-
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
@@ -55,18 +50,18 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'pry-rails', group: [:development, :test]
 gem 'rails_12factor', group: :production
 gem 'better_errors', group: :development
-gem "binding_of_caller", group: :development
+gem 'binding_of_caller', group: :development
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails', '~> 4.0.0'
   gem 'coffee-rails', '~> 4.0.0'
-  gem "therubyracer"
+  gem 'therubyracer'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', platforms: :ruby
 
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier', '>= 1.3.0'
 end
 
 group :development do
