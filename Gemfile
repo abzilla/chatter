@@ -8,7 +8,7 @@ gem 'rails', '4.0.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
 gem 'thin'
-gem 'websocket-rails', git: 'git://github.com/DanKnox/websocket-rails.git'
+gem 'websocket-rails'
 gem "less-rails"
 gem 'twitter-bootstrap-rails'
 
@@ -56,8 +56,6 @@ gem 'binding_of_caller', group: :development
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-
-
   gem 'therubyracer'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', platforms: :ruby
