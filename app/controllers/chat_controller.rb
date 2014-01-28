@@ -6,18 +6,18 @@ class ChatController < WebsocketRails::BaseController
   end
   
   def system_msg(ev, msg)
-    broadcast_message ev, {
-      user_name: 'system',
-      received: Time.now.to_s(:short),
+    broadcast_message ev, { 
+      user_name: 'system', 
+      received: Time.now.to_s(:short), 
       msg_body: msg
     }
   end
   
   def user_msg(ev, msg)
-    broadcast_message ev, {
-      user_name: connection_store[:user][:user_name],
-      received: Time.now.to_s(:short),
-      msg_body: ERB::Util.html_escape(msg)
+    broadcast_message ev, { 
+      user_name:  connection_store[:user][:user_name], 
+      received:   Time.now.to_s(:short), 
+      msg_body:   ERB::Util.html_escape(msg) 
       }
   end
   
