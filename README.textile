@@ -4,19 +4,11 @@ A real-time chat app using WebSockets on Rails, Client-side Coffee-Script, JQuer
 
 h2. Diagnostics
 
-This application was built with recipes that are known to work together.
+Opens a WebSocket to the backend. Any time a chat message is sent from the browser, it’s sent to the server and then broadcasted to each connecting client and displayed on the page.
 
-This application was built with preferences that are NOT known to work together.
+There are a few key pieces to this implementation. I use Faye’s WebSockets implementation that provides the standard WebSockets API. This allows me to build a Rack middleware that responds to WebSockets.
 
-If the application doesn't work as expected, please "report an issue":https://github.com/RailsApps/rails_apps_composer/issues and include these diagnostics:
-
-We'd also like to know if you've found combinations of recipes or preferences that do work together.
-
-Recipes:
-["apps4", "controllers", "core", "email", "extras", "frontend", "gems", "git", "init", "models", "prelaunch", "railsapps", "readme", "routes", "saas", "setup", "testing", "views"]
-
-Preferences:
-{:git=>true, :apps4=>"learn-rails", :database=>"default", :unit_test=>false, :integration=>false, :fixtures=>false, :email=>"gmail", :authentication=>false, :devise_modules=>false, :authorization=>false, :starter_app=>false, :form_builder=>"simple_form", :quiet_assets=>true, :local_env_file=>true, :better_errors=>true, :dev_webserver=>"webrick", :prod_webserver=>"same", :templates=>"erb", :continuous_testing=>"none", :frontend=>"simple", :rvmrc=>true, :ban_spiders=>true, :github=>true}
+JavaScript on the browser opens a WebSocket connection to the server and responds to a WebSocket message being received from the server to display the chat message. 
 
 h2. Ruby on Rails
 
@@ -25,11 +17,9 @@ This application requires:
 * Ruby version 2.0.0
 * Rails version 4.0.0
 
-Learn more about "Installing Rails":http://railsapps.github.io/installing-rails.html.
-
 h2. Database
 
-This application uses SQLite with ActiveRecord.
+This application uses PostgreSQL with ActiveRecord.
 
 h2. Development
 
@@ -39,26 +29,6 @@ h2. Development
 * Form Builder: SimpleForm
 * Authentication: None
 * Authorization: None
-
-h2. Email
-
-The application is configured to send email using a Gmail account.
-
-h2. Getting Started
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-h2. Documentation and Support
-
-This is the only documentation.
-
-h4. Issues
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-h2. Similar Projects
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 h2. Contributing
 
@@ -71,10 +41,4 @@ If you make improvements to this application, please share with others.
 
 If you add functionality to this application, create an alternative implementation, or build an application that is similar, please contact me and I'll add a note to the README so that others can find your work.
 
-h2. Credits
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-h2. License
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
