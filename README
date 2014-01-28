@@ -1,4 +1,4 @@
 Chatter
 ========================
 
-Real-time chat!
+A real-time chat app using WebSockets on Rails, Client-side Coffee-Script, JQuery, HTML5.
