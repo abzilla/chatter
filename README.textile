@@ -26,7 +26,6 @@ h2. Development
 * Template Engine: ERB
 * Testing Framework: Test::Unit
 * Front-end Framework: None
-* Form Builder: SimpleForm
 * Authentication: None
 * Authorization: None
 
