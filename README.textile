@@ -6,7 +6,7 @@ h2. Diagnostics
 
 Opens a WebSocket to the backend. Any time a chat message is sent from the browser, it’s sent to the server and then broadcasted to each connecting client and displayed on the page.
 
-There are a few key pieces to this implementation. I use  themgt's WebSockets implementation that provides the standard API. This allows me to build a Rack middleware that responds to WebSockets.
+There are a few key pieces to this implementation. I use themgt's WebSockets implementation that provides the standard API. This allows me to build a Rack middleware that responds to WebSockets.
 
 JavaScript on the browser opens a WebSocket connection to the server and responds to a message being received from the server to display the chat message. 
 
